@@ -15,7 +15,6 @@ body {
   color: white;
 }
 
-
 /* NavBar */
 .navbar {
   background-color: #1c1c1c;
@@ -60,10 +59,71 @@ body {
   text-align: center;
 }
 
-/* MovieCard */
-.card-title {
-  font-size: 20px;
+/* MovieCard Effects */
+.movie-card {
+  text-decoration: none;
+}
+
+.movie-card-inner {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hover Effect: Glow & Scale */
+.movie-card-inner:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Ensure Image Stays Inside Card */
+.card-img-top {
+  transition: transform 0.3s ease;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Prevent Image from Overlapping Text */
+.movie-card-inner:hover .card-img-top {
+  transform: scale(1.03);
+}
+
+/* Remove Yellow Color & Style Tap for More */
+.tap-for-more {
+  font-size: 16px;
   font-weight: bold;
-  color: white;
-  font-weight: bold;
+  margin-bottom: 5px;
+  color: white; /* Changed from yellow to white */
+}
+
+/* Favorite Button Hover */
+.favorite-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+/* Movie Description Page */
+.movie-description {
+  font-size: 18px;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+}
+
+.movie-trailer {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+}
+
+/* Back Button Placement */
+.back-button {
+  position: absolute;
+  top: 80px; /* Moves it down to avoid navbar overlap */
+  left: 20px;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
 }
